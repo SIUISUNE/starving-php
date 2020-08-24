@@ -1,0 +1,18 @@
+{
+  "name": "starving/php",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "siuisune",
+      "email": "siuisune@163.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Sun\\Func\\": "src/Starving/Func"
+    }
+  }
+}
