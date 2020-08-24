@@ -1,7 +1,7 @@
 <?php
 
 
-use Starving\Func\PHP;
+use Starving\Factory\PHP;
 
 require_once './vendor/autoload.php';
 

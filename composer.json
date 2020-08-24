@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Sun\\Func\\": "src/Starving/Func"
+      "Starving\\Factory\\": "src/Starving/Factory"
     }
   }
 }

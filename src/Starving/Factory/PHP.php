@@ -1,6 +1,6 @@
 <?php
 
-namespace Starving\Func;
+namespace Starving\Factory;
 
 class PHP
 {
