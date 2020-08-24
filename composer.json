@@ -1,6 +1,7 @@
 {
   "name": "starving/php",
   "type": "library",
+  "description": "the php tool.",
   "license": "MIT",
   "authors": [
     {
@@ -9,7 +10,9 @@
     }
   ],
   "minimum-stability": "dev",
-  "require": {},
+  "require": {
+    "php": "^7.2"
+  },
   "autoload": {
     "psr-4": {
       "Sun\\Func\\": "src/Starving/Func"
