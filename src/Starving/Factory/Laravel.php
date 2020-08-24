@@ -5,7 +5,6 @@ namespace Starving\Factory;
 
 
 use Illuminate\Support\Facades\Validator;
-use Starving\Exception\StarvingException;
 
 class Laravel
 {
@@ -101,12 +100,10 @@ class Laravel
     }
 
     /**
-     *
      * @param array $data
      * @param array $rules
      * @param array $messages
      * @param array $customAttributes
-     * @throws StarvingException
      */
     public function verifyData(array $data, array $rules, array $messages = [], array $customAttributes = [])
     {

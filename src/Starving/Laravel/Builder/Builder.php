@@ -4,8 +4,6 @@ namespace Starving\Laravel\Builder;
 
 class Builder extends \Illuminate\Database\Eloquent\Builder
 {
-    const PER_PAGE = 30;
-
     /**
      * @param int|null $page_size
      * @param array|null $columns
@@ -14,6 +12,7 @@ class Builder extends \Illuminate\Database\Eloquent\Builder
      */
     public function page(?int $page_size = null, ?array $columns = ['*'], ?int $page = null)
     {
+        $get_size = config('laravel-starving-php.builder.page_size', '30');
         $get_page = config('laravel-starving-php.builder.page', 'page');
         $get_page_size = config('laravel-starving-php.builder.page_size', 'page_size');
         $get_list_name = config('laravel-starving-php.builder.list_name', 'list');
@@ -28,7 +27,7 @@ class Builder extends \Illuminate\Database\Eloquent\Builder
             $page_size = request()->input($get_page_size);
         }
         if (!is_numeric($page_size)) {
-            $page_size = max(1, static::PER_PAGE);
+            $page_size = max(1, $get_size);
         }
 
         $pageObj = $this->paginate($page_size, $columns, 'current_page', $page);
