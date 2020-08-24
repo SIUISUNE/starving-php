@@ -17,7 +17,9 @@
   },
   "autoload": {
     "psr-4": {
-      "Starving\\Factory\\": "src/Starving/Factory"
+      "Starving\\Factory\\": "src/Starving/Factory",
+      "Starving\\Exception\\": "src/Starving/Exception",
+      "Starving\\Laravel\\": "src/Starving/Laravel"
     }
   }
 }
