@@ -1,6 +1,6 @@
 <?php
 
-namespace Starving\Laravel\Builder;
+namespace Starving\Laravel;
 
 class Builder extends \Illuminate\Database\Eloquent\Builder
 {

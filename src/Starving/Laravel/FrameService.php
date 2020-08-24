@@ -1,6 +1,6 @@
 <?php
 
-namespace Starving\Laravel\Service;
+namespace Starving\Laravel;
 
 
 use Illuminate\Http\Request;
