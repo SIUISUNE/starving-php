@@ -67,7 +67,7 @@ class Laravel
      * @param $model
      * @return array
      */
-    public function getModelByColumnLists($data, $model)
+    public static function getModelByColumnLists($data, $model)
     {
         $columns = self::getColumnListing($model);
         $res = array();
@@ -84,7 +84,7 @@ class Laravel
      * @param $model
      * @return array
      */
-    public function getColumnListing($model)
+    public static function getColumnListing($model)
     {
         if (!is_string($model)) {
             return [];
@@ -105,7 +105,7 @@ class Laravel
      * @param array $messages
      * @param array $customAttributes
      */
-    public function verifyData(array $data, array $rules, array $messages = [], array $customAttributes = [])
+    public static function verifyData(array $data, array $rules, array $messages = [], array $customAttributes = [])
     {
         /*
          例子：
