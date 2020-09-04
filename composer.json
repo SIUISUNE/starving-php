@@ -12,14 +12,11 @@
   "minimum-stability": "dev",
   "require": {
     "php": "^7.2",
-    "laravel/framework": "^7.0",
     "ext-mbstring": "*"
   },
   "autoload": {
     "psr-4": {
-      "Starving\\Factory\\": "src/Starving/Factory",
-      "Starving\\Exception\\": "src/Starving/Exception",
-      "Starving\\Laravel\\": "src/Starving/Laravel"
+      "Starving\\Factory\\": "src/Starving/Factory"
     }
   }
 }

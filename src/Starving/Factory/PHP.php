@@ -5,6 +5,31 @@ namespace Starving\Factory;
 class PHP
 {
     /**
+     * @param $idCard
+     * @return bool
+     */
+    public static function checkIdCard($idCard)
+    {
+        if (strlen($idCard) != 18) {
+            return false;
+        }
+        $idCard_base = substr($idCard, 0, 17);
+        $verify_code = substr($idCard, 17, 1);
+        $factor = array(7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2);
+        $verify_code_list = array('1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2');
+        $total = 0;
+        for ($i = 0; $i < 17; $i++) {
+            $total += substr($idCard_base, $i, 1) * $factor[$i];
+        }
+        $mod = $total % 11;
+        if ($verify_code == $verify_code_list[$mod]) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
      * 提取富文本字符串的纯文本
      *
      * @param $string string 需要进行截取的富文本字符串
